@@ -1,0 +1,123 @@
+body {
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #d8f3dc;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	color: #081c15;
+	text-align: center;
+}
+
+.outer-div {
+	background-color: #fff;
+	padding: 20px;
+	width: 500px;
+	margin: auto;
+}
+
+#To-Do-Form {
+	display: flex;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+#Add-Btn {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #b8e9d2;
+	color: #d8f3dc;
+	border: none;
+	cursor: pointer;
+}
+
+#task {
+	width: 500px;
+	padding: 14px;
+	font-size: 16px;
+	border: none;
+	background-color: #b8e9d2;
+	border-radius: 4px 0 0 4px;
+}
+
+#task:focus {
+	outline: none;
+	background-color: #b8e9d2;
+}
+
+#Add-Btn #add-Icon {
+	background-color: #379777;
+	padding: 6px 8px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #1b4332;
+	color: #d8f3dc;
+	border: none;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #52b788;
+}
+
+#To-Do-Form button {
+	border-radius: 0 4px 4px 0;
+}
+
+#filters {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-bottom: 8px;
+	padding: 10px 0;
+	border-radius: 8px;
+	background-color: #b8e9d2;
+}
+
+#filters button {
+	margin: 0 5px;
+	border-radius: 10px;
+	background-color: #379777;
+	color: white;
+}
+
+#filters button:hover {
+	background-color: #2a7d5f;
+}
+
+.taskLists {
+	border-radius: 4px;
+}
+
+.task-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10px;
+	margin-top: 15px;
+	background-color: #b8e9d2;
+	border-radius: 4px;
+	color: #45474b;
+}
+
+#taskList input[type="checkbox"] {
+	margin-right: 10px;
+}
+
+#taskList span {
+	margin-right: 10px;
+	font-size: 18px;
+}
+
+#taskList button {
+	padding: 10px 15px;
+	font-size: 14px;
+	margin-left: 5px;
+	border-radius: 10px;
+}

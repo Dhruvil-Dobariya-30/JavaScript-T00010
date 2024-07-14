@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM Events</title>
+	</head>
+	<!-- <body onload="OnLoad()"> -->
+	<body>
+		<p>OnClick Event</p>
+		<button class="onClick" onclick="onClick()">Click me</button>
+		<hr />
+
+		<p>On Double Click Event</p>
+		<button ondblclick="onDblClick()">Double Click</button>
+		<p id="msg"></p>
+		<hr />
+
+		<p>On Mouse Over & Out</p>
+		<h2 id="emoji" onmouseover="MouseOver()" onmouseout="mouseOut()">😊</h2>
+		<hr />
+
+		<p>Copy text</p>
+		<input type="text" oncopy="copy()" value="Try to copy this text" />
+		<p id="copy-msg"></p>
+		<hr />
+
+		<p>Focus</p>
+		Focus on input field : <input type="text" id="txt" onfocus="OnFocus()" />
+		<hr />
+
+		<p>On Input</p>
+		Write in input box : <input type="text" id="myInput" oninput="OnInput()" />
+		<p id="input-msg"></p>
+		<hr />
+
+		<p>Key Down</p>
+		Press a key in the input field : <input type="text" onkeydown="keyDown()" />
+		<p id="input-key"></p>
+		<hr />
+
+		<p>On Change</p>
+		Write here <input type="text" onchange="change()" id="change" />
+		<p id="change-msg"></p>
+		<hr />
+
+		<p>On Submit</p>
+		<form id="form">
+			Test field: <input type="text" id="txt" name="txt" />
+			<button type="submit">Submit form</button>
+		</form>
+		<p id="log"></p>
+
+		<script src="./23.Dom-Events.js"></script>
+	</body>
+</html>

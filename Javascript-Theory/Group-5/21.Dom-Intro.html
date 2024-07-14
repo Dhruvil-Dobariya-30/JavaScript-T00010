@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM</title>
+	</head>
+	<body>
+		<h1 id="header">Hello... Good Morning.</h1>
+		<h3 class="title">DOM</h3>
+		<p>Document Object Model</p>
+
+		<script>
+			var header = document.getElementById("header");
+			console.log(header.innerHTML);
+
+			var title = document.getElementsByClassName("title");
+			console.log(title[0].innerHTML);
+
+			var paragraph = document.getElementsByTagName("p");
+			console.log(paragraph[0].innerText);
+
+			var query = document.querySelector("#header");
+			console.log(query.innerText);
+		</script>
+	</body>
+</html>

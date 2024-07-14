@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./9.Interactive-Photo-Gallery.css" />
+		<title>Interactive Photo Gallery</title>
+	</head>
+	<body>
+		<div class="inputs">
+			<input type="text" id="imageUrl" placeholder="Enter image URL" />
+			<button id="addImageButton" onclick="addImage()">Add Image</button>
+		</div>
+
+		<div id="gallery"></div>
+
+		<div class="close" id="close">
+			<button class="closeImages" id="closeImages" onclick="closeImages()">
+				X
+			</button>
+			<img id="previewImg" src="" />
+		</div>
+
+		<script src="./9.Interactive-Photo-Gallery.js"></script>
+	</body>
+</html>

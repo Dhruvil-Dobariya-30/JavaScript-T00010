@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./13.Music-Player.css" />
+    <title>13.Music Player With Playlist</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-container">
+        <h2>All Music</h2>
+        <div id="allMusic"></div>
+      </div>
+
+      <div class="center-container">
+        <div id="addSongForm" class="add-song-form">
+          <div class="form-inner-div">
+            <div class="input-row">
+              <input type="text" id="title" placeholder="Song Title" />
+              <input
+                type="text"
+                id="cover_image"
+                placeholder="Cover Image URL"
+              />
+              <button onclick="addNewSong()">Add</button>
+              <button onclick="hideForm()">Cancel</button>
+            </div>
+          </div>
+        </div>
+        <div id="div"></div>
+      </div>
+
+      <div class="playlist-container">
+        <h2>Playlist</h2>
+        <div id="playlist"></div>
+      </div>
+    </div>
+    <script src="./13.Music-Player.js"></script>
+    <script src="./Data.js"></script>
+  </body>
+</html>

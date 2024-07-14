@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times;
+  background-color: #a5cbff;
+}
+
+#option {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-color: #d4f1f4;
+  gap: 10px;
+  width: 550px;
+}
+
+.header {
+  width: 100%;
+  align-items: center;
+  background-color: #4a90e2;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  color: #fff;
+}
+
+.display-Question {
+  font-size: 18px;
+  background-color: #fff;
+  padding: 10px;
+  margin: 25px 0px 10px 0;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.inputs {
+  font-size: 17px;
+}
+
+.div1 {
+  background-color: #fff;
+  margin: 12px 0;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#radio {
+  margin: 10px 10px;
+}
+
+input {
+  height: 15px;
+  width: 15px;
+}
+
+button {
+  padding: 12px 15px;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  background-color: #3a7bd5;
+  color: #fff;
+}
+
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  margin: 12px 25px;
+}
+
+.score-div {
+  text-align: center;
+  padding: 5px;
+  background-color: #4a90e2;
+  margin: 35px;
+  border-radius: 5px;
+}
+
+.wrong-header {
+  text-align: center;
+  margin: 9px;
+}
+
+.wrong-ques {
+  padding: 7px;
+  background-color: #4a90e269;
+  margin: 12px 35px;
+  border-radius: 5px;
+}
+
+.correct {
+  font-weight: 900;
+}

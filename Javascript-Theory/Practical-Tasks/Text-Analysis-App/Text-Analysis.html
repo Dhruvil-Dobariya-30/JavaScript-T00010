@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Analysis Tool</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 20px;
+      }
+
+      .input {
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        width: 90%;
+        height: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 0 20px 10px 20px;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #5d8ef1;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #5949e8;
+      }
+
+      .info {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      .info p {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+
+      .info p span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input">
+      <textarea name="text" id="text" placeholder="Write Here"></textarea> <br>
+      <button onclick="Analysis()">Check</button>
+    </div>
+
+    <div class="info">
+      <p>Total length is: <span id="lenght"></span></p>
+      <p>No. of Words is: <span id="words"></span></p>
+      <p>No. of Characters is: <span id="char"></span></p>
+      <p>Freq. of each word is: <span id="frequency"></span></p>
+    </div>
+
+    <script src="./Text-Analysis.js"></script>
+  </body>
+</html>

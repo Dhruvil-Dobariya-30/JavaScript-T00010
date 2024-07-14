@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Text-Analysis.css" />
+    <title>Text Analysis App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Text Analysis Tool</h1>
+      <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+      <button onclick="analyzeText()">Analyze</button>
+      <div id="results">
+        <p>Word Count: <span id="wordCount">0</span></p>
+        <p>Average Word Length: <span id="avgLength">0</span></p>
+        <p>Most Common Words: <span id="commonWords">-</span></p>
+      </div>
+    </div>
+    <script src="./Text-Analysis.js"></script>
+  </body>
+</html>

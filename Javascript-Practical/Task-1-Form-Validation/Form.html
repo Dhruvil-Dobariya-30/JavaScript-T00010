@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="Form.css" />
+		<title>Form Validation</title>
+	</head>
+	<body>
+		<div class="form-container">
+			<form>
+				<label for="name">Name</label>
+				<input
+					type="text"
+					id="name"
+					name="name"
+					onkeyup="checkName()"
+					onfocus="manageFocus('name-msg','block')"
+					onfocusout="manageFocus('name-msg','none')"
+					placeholder="e.g. User"
+					autocomplete="off"
+				/>
+				<p class="warning" id="name-msg">
+					<span id="nameCross">&#x274C;</span>Name Must be at least 3 characters
+					long
+				</p>
+
+				<label for="email">Email</label>
+				<input
+					type="email"
+					name="email"
+					id="email"
+					onkeyup="checkEmail()"
+					onfocus="manageFocus('email-msg','block')"
+					onfocusout="manageFocus('email-msg','none')"
+					placeholder="e.g. user@example.com"
+				/>
+				<p class="warning" id="email-msg">
+					<span id="emailCross">&#x274C;</span> Must be in a valid email format.
+				</p>
+
+				<label for="password">Password</label>
+				<input
+					type="password"
+					name="password"
+					id="password"
+					onkeyup="checkPass()"
+					onfocus="manageFocus('validate','block')"
+					onfocusout="manageFocus('validate','none')"
+					placeholder="e.g. User@123"
+				/>
+				
+				<div id="validate">
+					<p id="pass-number">
+						<span id="numCross">&#x274C;</span>Atleast 1 Number
+					</p>
+					<p id="pass-capital">
+						<span id="capCross">&#x274C;</span>A Uppercase Character
+					</p>
+					<p id="pass-small">
+						<span id="smallCross">&#x274C;</span>A Lowercase Character
+					</p>
+					<p id="pass-special">
+						<span id="specialCross">&#x274C;</span>A Special Character
+					</p>
+					<p id="pass-length">
+						<span id="lengthCross">&#x274C;</span>Minimum 8 Character
+					</p>
+				</div>
+
+				<label for="re-password">Confirm Password</label>
+				<input
+					type="password"
+					name="re-password"
+					id="re-password"
+					onkeyup="checkRePass()"
+					onfocus="manageFocus('re-Pass-msg','block')"
+					onfocusout="manageFocus('re-Pass-msg','none')"
+					placeholder="e.g. User@123"
+				/>
+				<p id="re-Pass-msg" class="warning">
+					<span id="RePassCross">&#x274C;</span>Confirm Password should same
+				</p>
+				<button id="btn" onclick="SubmitMsg()">Submit</button>
+			</form>
+		</div>
+
+		<script src="./Form.js"></script>
+	</body>
+</html>

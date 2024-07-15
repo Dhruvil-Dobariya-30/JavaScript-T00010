@@ -57,6 +57,10 @@ h2 {
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+.music-list:hover {
+	background-color: #d65a31;
+}
+
 .music-list div {
 	display: flex;
 	align-items: center;
@@ -76,7 +80,7 @@ h2 {
 }
 
 .music-list button:hover {
-	background-color: #d65a31;
+	background-color: #e4a788;
 }
 
 #cover {
@@ -236,7 +240,7 @@ h2 {
 }
 
 .playlist-container button {
-	background-color: #d65a31;
+	background-color: #20b2aa;
 	color: #f0f4f8;
 	padding: 5px 10px;
 	border: none;
@@ -246,7 +250,7 @@ h2 {
 }
 
 .playlist-container button:hover {
-	background-color: #20b2aa;
+	background-color: #e4a788;
 }
 
 audio {

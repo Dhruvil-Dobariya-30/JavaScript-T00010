@@ -10,10 +10,10 @@ let isPlaying = true;
 let playlistData = [];
 
 function allMusics() {
-  allMusic = "";
+	allMusic = "";
 
-  musicData.map((data) => {
-    allMusic += `
+	musicData.map((data) => {
+		allMusic += `
             <div class="music-list">
 							<div>
                 <img src=${data.cover_image} id="cover" />
@@ -25,17 +25,17 @@ function allMusics() {
                 </div>
             </div>
         `;
-  });
+	});
 
-  document.getElementById("allMusic").innerHTML = allMusic;
+	document.getElementById("allMusic").innerHTML = allMusic;
 }
 
 allMusics();
 
 function playMusic(i) {
-  div = "";
-  id = i;
-  div += `
+	div = "";
+	id = i;
+	div += `
     <div>
       <img src=${musicData[i].cover_image} class="cover" />
       <h3>${musicData[i].title}</h3>
@@ -53,59 +53,89 @@ function playMusic(i) {
         </div>
     </div>
   `;
-  document.getElementById("div").innerHTML = div;
+	document.getElementById("div").innerHTML = div;
+}
+
+let isSuffle = false;
+
+function suffle() {
+	isSuffle = !isSuffle;
+
+	const suffleButton = document.querySelector("#suffle");
+	if (isSuffle) {
+		suffleButton.style.backgroundColor = "#20b2aa";
+		suffleButton.textContent = "Shuffle Mode On";
+	} else {
+		suffleButton.style.backgroundColor = "#d65a31";
+		suffleButton.textContent = "Shuffle";
+	}
 }
 
 function next() {
-  if (id == 9) {
-    id = 0;
-  } else {
-    id++;
-  }
-  playMusic(id);
+	if (isSuffle) {
+		let range = musicData.length - 1;
+		let num = Math.ceil(Math.random() * (range - 0) + 0);
+		playMusic(num);
+	} else {
+		if (id == 9) {
+			id = 0;
+		} else {
+			id++;
+		}
+		playMusic(id);
+	}
+
+	// Add this block to maintain shuffle button state
+
+	const suffleButton = document.querySelector("#suffle");
+	if (isSuffle) {
+		suffleButton.style.backgroundColor = "#20b2aa";
+		suffleButton.textContent = "Shuffle Mode On";
+	}
 }
+
 function prev() {
-  if (id == 0) {
-    id = 9;
-  } else {
-    id--;
-  }
-  playMusic(id);
+	if (id == 0) {
+		id = 9;
+	} else {
+		id--;
+	}
+	playMusic(id);
 }
 
 function togglePlayPause() {
-  const audio = document.getElementById("music");
-  if (isPlaying) {
-    audio.pause();
-    isPlaying = false;
-  } else {
-    audio.play();
-    isPlaying = true;
-  }
-  updatePlayPauseButton();
+	const audio = document.getElementById("music");
+	if (isPlaying) {
+		audio.pause();
+		isPlaying = false;
+	} else {
+		audio.play();
+		isPlaying = true;
+	}
+	updatePlayPauseButton();
 }
 
 function updatePlayPauseButton() {
-  const playPauseButton = document.getElementById("playPause");
-  playPauseButton.textContent = isPlaying ? "Pause" : "Play";
+	const playPauseButton = document.getElementById("playPause");
+	playPauseButton.textContent = isPlaying ? "Pause" : "Play";
 }
 
 function addPlayList(i) {
-  if (!playlistData.includes(i)) {
-    playlistData.push(i);
-    displayPlaylist();
-  } else {
-    alert(`Song ${musicData[i].title} is already in the playlist`);
-  }
+	if (!playlistData.includes(i)) {
+		playlistData.push(i);
+		displayPlaylist();
+	} else {
+		alert(`Song ${musicData[i].title} is already in the playlist`);
+	}
 }
 
 function displayPlaylist() {
-  PlaylistDiv = "";
+	PlaylistDiv = "";
 
-  playlistData.map((data) => {
-    console.log(musicData[data].title);
+	playlistData.map((data) => {
+		console.log(musicData[data].title);
 
-    PlaylistDiv += `
+		PlaylistDiv += `
     <div class="music-list" >
 		  <div>
 		    <img src=${musicData[data].cover_image} id="cover" />
@@ -116,59 +146,51 @@ function displayPlaylist() {
       </div>
 		</div>
 		`;
-  });
+	});
 
-  document.getElementById("playlist").innerHTML = PlaylistDiv;
+	document.getElementById("playlist").innerHTML = PlaylistDiv;
 }
 
 function removeFromPL(title) {
-  const index = playlistData.indexOf(title);
-  playlistData.splice(index, 1);
-  displayPlaylist();
-}
-
-function suffle() {
-  let range = musicData.length;
-
-  let num = Math.ceil(Math.random() * (range - 0) + 0);
-
-  playMusic(num);
+	const index = playlistData.indexOf(title);
+	playlistData.splice(index, 1);
+	displayPlaylist();
 }
 
 function addNewSong() {
-  const title = document.getElementById("title").value;
-  const cover_image = document.getElementById("cover_image").value;
+	const title = document.getElementById("title").value;
+	const cover_image = document.getElementById("cover_image").value;
 
-  if (title && cover_image) {
-    const newSong = {
-      id: musicData.length,
-      title,
-      cover_image,
-      music_path: "",
-    };
+	if (title && cover_image) {
+		const newSong = {
+			id: musicData.length,
+			title,
+			cover_image,
+			music_path: "",
+		};
 
-    musicData.push(newSong);
-    localStorage.setItem("MusicData", JSON.stringify(musicData));
-    allMusics();
-    alert("New song added successfully!");
-    hideForm();
-  } else {
-    alert("Please fill in all fields.");
-  }
+		musicData.push(newSong);
+		localStorage.setItem("MusicData", JSON.stringify(musicData));
+		allMusics();
+		alert("New song added successfully!");
+		hideForm();
+	} else {
+		alert("Please fill in all fields.");
+	}
 }
 
 function removeSong(i) {
-  musicData.splice(i, 1);
-  musicData.forEach((song, index) => (song.id = index));
-  localStorage.setItem("MusicData", JSON.stringify(musicData));
-  allMusics();
-  if (id === i) {
-    document.getElementById("div").innerHTML = "";
-  }
+	musicData.splice(i, 1);
+	musicData.forEach((song, index) => (song.id = index));
+	localStorage.setItem("MusicData", JSON.stringify(musicData));
+	allMusics();
+	if (id === i) {
+		document.getElementById("div").innerHTML = "";
+	}
 }
 
 function updateNowPlaying(i) {
-  const nowPlaying = `
+	const nowPlaying = `
     <h2>Now Playing</h2>
     <img src="${musicData[i].cover_image}" alt="${musicData[i].title}" class="now-playing-cover">
     <h3>${musicData[i].title}</h3>
@@ -176,15 +198,15 @@ function updateNowPlaying(i) {
     <p>Genre: ${musicData[i].genre}</p>
     <p>Year: ${musicData[i].year}</p>
   `;
-  document.getElementById("nowPlaying").innerHTML = nowPlaying;
+	document.getElementById("nowPlaying").innerHTML = nowPlaying;
 }
 
 function showForm() {
-  document.getElementById("addSongForm").style.display = "flex";
-  document.getElementById("showFormButton").style.display = "none";
+	document.getElementById("addSongForm").style.display = "flex";
+	document.getElementById("showFormButton").style.display = "none";
 }
 
 function hideForm() {
-  document.getElementById("addSongForm").style.display = "none";
-  document.getElementById("showFormButton").style.display = "block";
+	document.getElementById("addSongForm").style.display = "none";
+	document.getElementById("showFormButton").style.display = "block";
 }

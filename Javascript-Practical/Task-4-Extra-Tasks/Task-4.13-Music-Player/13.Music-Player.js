@@ -20,8 +20,8 @@ function allMusics() {
                 <h5>${data.title}</h5>
 							</div>
                 <div class="control">
-                    <button onclick="playMusic(${data.id})">&#9654;</button>
-                    <button onclick="removeSong(${data.id})">&#10060;</button>
+                    <button onclick="playMusic(${data.id})"><i class="fa-solid fa-play"></i></button>
+                    <button onclick="removeSong(${data.id})"><i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
         `;
@@ -44,12 +44,12 @@ function playMusic(i) {
         <source src="${musicData[id].music_path}" type="audio/ogg">
       </audio>
       <div class="btns"> 
-        <button onclick="prev()" id="prev">Previous</button>
-        <button onclick="togglePlayPause()" id="playPause">Pause</button>
-        <button onclick="next()" id="change">Next</button>
-        <button onclick="suffle()" id="suffle">Suffle</button>
-        <button onclick="addPlayList(${id})" id="${musicData[id]}">Add To Playlist</button>
-        <button id="showFormButton" onclick="showForm()">Add New Song</button>
+        <button onclick="prev()" id="prev"><i class="fa-solid fa-backward"></i></button>
+        <button onclick="togglePlayPause()" id="playPause"><i class="fa-solid fa-pause"></i></button>
+        <button onclick="next()" id="change"><i class="fa-solid fa-forward"></i></button>
+        <button onclick="suffle()" id="suffle"><i class="fa-solid fa-shuffle"></i></button>
+        <button onclick="addPlayList(${id})" id="${musicData[id]}"><i class="fa-solid fa-list"></i></button>
+        <button id="showFormButton" onclick="showForm()"><i class="fa-solid fa-file-circle-plus"></i></button>
         </div>
     </div>
   `;
@@ -67,7 +67,7 @@ function suffle() {
 		suffleButton.textContent = "Shuffle Mode On";
 	} else {
 		suffleButton.style.backgroundColor = "#d65a31";
-		suffleButton.textContent = "Shuffle";
+		suffleButton.innerHTML = `<i class="fa-solid fa-shuffle"></i>`;
 	}
 }
 
@@ -84,6 +84,9 @@ function next() {
 		}
 		playMusic(id);
 	}
+
+
+
 	const suffleButton = document.querySelector("#suffle");
 	if (isSuffle) {
 		suffleButton.style.backgroundColor = "#20b2aa";
@@ -114,7 +117,7 @@ function togglePlayPause() {
 
 function updatePlayPauseButton() {
 	const playPauseButton = document.getElementById("playPause");
-	playPauseButton.textContent = isPlaying ? "Pause" : "Play";
+	playPauseButton.innerHTML = isPlaying ? `<i class="fa-solid fa-pause"></i>` : `<i class="fa-solid fa-play"></i>`;
 }
 
 function addPlayList(i) {
@@ -139,7 +142,7 @@ function displayPlaylist() {
 			  <h5>${musicData[data].title}</h5>
       </div>
       <div>
-			  <button onclick="removeFromPL(${data})">Remove</button>
+			  <button onclick="removeFromPL(${data})"><i class="fa-solid fa-trash"></i></button>
       </div>
 		</div>
 		`;
@@ -185,6 +188,8 @@ function removeSong(i) {
 		document.getElementById("div").innerHTML = "";
 	}
 }
+
+
 
 function showForm() {
 	document.getElementById("addSongForm").style.display = "flex";

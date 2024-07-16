@@ -16,6 +16,10 @@ body {
 	align-items: center;
 }
 
+i{
+	padding: 3px;
+}
+
 .container {
 	display: flex;
 	justify-content: space-between;

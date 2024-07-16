@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display and Search a List of Users</title>
+    <link rel="stylesheet" href="./Search-Table.css" />
+  </head>
+  <body>
+    <div class="search-div">
+      <input type="text" name="search" id="search" placeholder="Search Name" />
+
+      <button onclick="searchName()">&#x1F50E;&#xFE0E;</button>
+    </div>
+
+    <table id="table" border="1">
+      <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script src="./Search-Table.js"></script>
+  </body>
+</html>

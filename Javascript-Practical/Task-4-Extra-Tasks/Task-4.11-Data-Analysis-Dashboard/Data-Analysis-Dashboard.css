@@ -29,7 +29,7 @@ nav ul {
 	display: flex;
 	flex-direction: column;
 	list-style-type: none;
-	gap: 15px;
+	gap: 25px;
 }
 
 nav ul li {

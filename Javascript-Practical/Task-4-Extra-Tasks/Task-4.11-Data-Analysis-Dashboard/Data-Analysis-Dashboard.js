@@ -74,7 +74,12 @@ function dynamicCharts() {
         },
       ],
     },
-    options: {
+    options: {legend: {
+			labels: {
+				fontColor: "#1a237e",
+				fontSize: 14
+			}
+		},
       responsive: true,
       maintainAspectRatio: false,
       scales: {

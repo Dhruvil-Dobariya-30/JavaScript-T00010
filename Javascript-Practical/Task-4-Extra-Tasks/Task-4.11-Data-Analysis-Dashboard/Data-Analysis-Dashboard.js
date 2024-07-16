@@ -74,18 +74,12 @@ function dynamicCharts() {
         },
       ],
     },
-    options: {legend: {
-			labels: {
-				fontColor: "#1a237e",
-				fontSize: 14
-			}
-		},
+
+    options: {
       responsive: true,
       maintainAspectRatio: false,
       scales: {
-        y: {
-          beginAtZero: true,
-        },
+        yAxes: [{ ticks: { min: 0 } }],
       },
     },
   });

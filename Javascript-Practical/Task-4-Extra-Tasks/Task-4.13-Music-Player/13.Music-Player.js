@@ -186,18 +186,6 @@ function removeSong(i) {
 	}
 }
 
-function updateNowPlaying(i) {
-	const nowPlaying = `
-    <h2>Now Playing</h2>
-    <img src="${musicData[i].cover_image}" alt="${musicData[i].title}" class="now-playing-cover">
-    <h3>${musicData[i].title}</h3>
-    <p>Artist: ${musicData[i].artist}</p>
-    <p>Genre: ${musicData[i].genre}</p>
-    <p>Year: ${musicData[i].year}</p>
-  `;
-	document.getElementById("nowPlaying").innerHTML = nowPlaying;
-}
-
 function showForm() {
 	document.getElementById("addSongForm").style.display = "flex";
 	document.getElementById("showFormButton").style.display = "none";

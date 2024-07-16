@@ -4,7 +4,7 @@ let score = 0;
 let questionsLeft = 10;
 let wrongAns = [];
 
-async function getData() {
+function getData() {
 	let optionDiv = "";
 	questionData.forEach((data) => {
 		if (data.id === id) {

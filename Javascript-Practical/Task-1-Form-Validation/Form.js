@@ -151,31 +151,3 @@ function SubmitMsg(e) {
 	alert("Form Submitted Successfully");
 	e.preventDefault();
 }
-
-// function checkPass() {
-//   let passData = passwordField.value;
-//   let special = /[!@#$%^&*(),.?":{}|<>]/;
-//   let capital = /[A-Z]/;
-//   let small = /[a-z]/;
-//   let num = /[0-9]/;
-
-//   let isCapital = capital.test(passData);
-//   let isSmall = small.test(passData);
-//   let isNum = num.test(passData);
-//   let isSpecial = special.test(passData);
-//   let isLength = passData.length >= 8;
-
-//   updateStyle("pass-capital", isCapital);
-//   updateStyle("pass-number", isNum);
-//   updateStyle("pass-small", isSmall);
-//   updateStyle("pass-special", isSpecial);
-//   updateStyle("pass-length", isLength);
-
-//   isPass = isCapital && isSmall && isNum && isSpecial && isLength;
-//   console.log(isPass);
-//   EnableBtn();
-// }
-// function updateStyle(ID, Check) {
-// 	document.getElementById(ID).style.color = Check ? GREEN : COLOR;
-// 	document.getElementById(`${ID}Cross`).innerHTML = Check ? RIGHT : CROSS;
-// }

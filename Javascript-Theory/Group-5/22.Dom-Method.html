@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DOM-Methods</title>
+	</head>
+	<body>
+		<p id="ById">Get Element By Id</p>
+		<p class="ByClass">Get Element By Class Name</p>
+		<h4>Get Element By Tag Name</h4>
+		<p class="query">Query Selector</p>
+
+		<div id="myDIV">
+			<p>Item 1</p>
+			<p>Item 2</p>
+		</div>
+
+		<script>
+			const ById = document.getElementById("ById");
+			console.log(ById.innerText);
+
+			const ByClass = document.getElementsByClassName("ByClass");
+			console.log(ByClass[0]);
+			console.log(ByClass[0].innerText);
+
+			const ByTagName = document.getElementsByTagName("h4");
+			console.log(ByTagName[0]);
+			console.log(ByTagName[0].innerText);
+
+			const element = document.getElementById("myDIV");
+			const list = element.querySelectorAll("p");
+			console.log(list[0]);
+		</script>
+	</body>
+</html>

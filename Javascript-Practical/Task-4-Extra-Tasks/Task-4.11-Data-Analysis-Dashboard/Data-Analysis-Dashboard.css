@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+
+body {
+	background-color: #f5f5f5;
+	color: #212121;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+}
+
+nav {
+	background-color: #1a237e;
+	padding: 20px;
+	width: 250px;
+	position: fixed;
+	height: 100vh;
+	overflow-y: auto;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	gap: 25px;
+}
+
+nav ul li {
+	background-color: #3949ab;
+	padding: 12px 15px;
+	border-radius: 8px;
+}
+
+nav ul li:hover {
+	background-color: #7986cb;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 14px;
+	display: block;
+}
+
+.inner-div {
+	width: 100vw;
+	padding: 30px;
+	margin-left: 250px;
+	overflow-y: auto;
+}
+
+.div1,
+.div2,
+.div3,
+.div4,
+.div5 {
+	background-color: #ffffff;
+	border-radius: 12px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.div2-inner-div,
+.div4-inner-div {
+	width: 50%;
+}
+
+.dynamic-Header,
+.static-Header {
+	background-color: #1a237e;
+	padding: 15px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 20px;
+	border-radius: 8px 8px 0 0;
+}
+
+.static-Header {
+	border-radius: 8px;
+}
+
+.chart-container1 {
+	background-color: #e8eaf6;
+	padding: 20px;
+	height: 600px;
+}
+
+.chart-container {
+	background-color: #e8eaf6;
+	padding: 20px;
+	height: 350px;
+}
+
+.controls {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 15px;
+	padding: 10px;
+	background-color: #3949ab;
+	color: #ffffff;
+}
+
+.controls div {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+select,
+button {
+	padding: 10px 15px;
+	border: 1px solid #1a237e;
+	border-radius: 6px;
+	font-size: 14px;
+	background-color: #ffffff;
+}
+
+button {
+	background-color: #1a237e;
+	color: #fff;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3949ab;
+}
+
+.div2,
+.div4 {
+	display: flex;
+	/* justify-content: space-evenly; */
+	gap: 20px;
+}
+
+.header {
+	font-size: 24px;
+	font-weight: bold;
+	color: #1a237e;
+	text-align: center;
+	padding: 20px;
+}
+
+canvas {
+	max-width: 100%;
+	height: 100%;
+	margin: auto;
+}

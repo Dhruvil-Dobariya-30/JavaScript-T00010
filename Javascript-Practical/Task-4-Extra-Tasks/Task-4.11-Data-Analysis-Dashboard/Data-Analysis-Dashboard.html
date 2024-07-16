@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+		<link rel="stylesheet" href="./Data-Analysis-Dashboard.css" />
+		<title>Data Analysis Dashboard</title>
+	</head>
+	<body>
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a href="#dynamicChart">Dynamic Chart</a></li>
+					<li>
+						<a href="#profitPercentage">Profit Percentage / Year Chart</a>
+					</li>
+					<li><a href="#sale-expenses">Sales & Expenses Per Month</a></li>
+					<li><a href="#customers">Total Customers Chart</a></li>
+					<li><a href="#Newcustomers">New Customers Chart</a></li>
+					<li><a href="#avg">Average Order Value Chart</a></li>
+					<li>
+						<a href="#customerSatisfaction">Customer Satisfaction Chart</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="inner-div">
+				<div class="div1">
+					<div class="dynamic-Header">Dynamic Chart</div>
+					<div>
+						<div class="controls">
+							<div>
+								<div>X-Axis</div>
+								<select id="select1">
+									<option value="month">Month</option>
+								</select>
+							</div>
+							<div>
+								<div>Y-Axis</div>
+								<select id="values">
+									<option value="sales">Sales</option>
+									<option value="expenses">Expenses</option>
+									<option value="profit">Profit</option>
+									<option value="profitPercentage">Profit Percentage</option>
+									<option value="customers">Customers</option>
+									<option value="averageOrderValue">Average Order Value</option>
+									<option value="employeeCount">Employee Count</option>
+									<option value="newCustomers">New Customers</option>
+									<option value="marketShare">Market Share</option>
+								</select>
+							</div>
+							<div>
+								<div>Chart Type</div>
+								<select id="types">
+									<option value="line">Line Chart</option>
+									<option value="bar">Bar Chart</option>
+									<option value="pie">Pie Chart</option>
+									<option value="polarArea">Polar Chart</option>
+								</select>
+							</div>
+							<button onclick="analyse()">Analyse</button>
+						</div>
+					</div>
+					<div class="chart-container1">
+						<canvas id="dynamicChart"></canvas>
+					</div>
+				</div>
+
+				<div class="static-Header">Static Charts</div>
+
+				<div class="div2">
+					<div class="div2-inner-div">
+						<div class="header">Profit Percentage By Year</div>
+						<div class="chart-container">
+							<canvas id="profitPercentage"></canvas>
+						</div>
+					</div>
+					<div class="div2-inner-div">
+						<div class="header">Average Order Value</div>
+						<div class="chart-container">
+							<canvas id="avg"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<div class="div3">
+					<div class="header">Sales & Expenses Per Month</div>
+					<div class="chart-container">
+						<canvas id="sale-expenses"></canvas>
+					</div>
+				</div>
+
+				<div class="div4">
+					<div class="div4-inner-div">
+						<div class="header">Total Customers</div>
+						<div class="chart-container">
+							<canvas id="customers"></canvas>
+						</div>
+					</div>
+					<div class="div4-inner-div">
+						<div class="header">New Customers</div>
+						<div class="chart-container">
+							<canvas id="Newcustomers"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<div class="div5">
+					<div class="header">Customer Satisfaction</div>
+					<div class="chart-container1">
+						<canvas id="customerSatisfaction"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./Data-Analysis-Dashboard.js"></script>
+		<script src="./Data.js"></script>
+	</body>
+</html>

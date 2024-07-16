@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fffbf5;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.container {
+	background-color: #c3acd0;
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	width: 300px;
+	padding: 25px;
+	border-radius: 8px;
+}
+
+input {
+	padding: 7px;
+	border: none;
+	border-radius: 8px;
+	background-color: #f7efe5;
+}
+
+input:focus {
+	outline: none;
+}
+
+button {
+	padding: 7px;
+	font-size: 14px;
+	font-weight: 900;
+	border-radius: 8px;
+	border: none;
+	background-color: #7743db;
+	color: #f7efe5;
+	cursor: pointer;
+}
+
+button:disabled {
+	background-color: #96939c;
+	cursor: not-allowed;
+}
+
+#countdown {
+	text-align: center;
+	background-color: #f7efe5;
+	padding: 20px;
+	font-size: 20px;
+	border-radius: 8px;
+}

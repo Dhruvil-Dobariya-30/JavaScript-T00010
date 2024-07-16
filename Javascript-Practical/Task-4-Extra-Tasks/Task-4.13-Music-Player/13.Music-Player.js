@@ -84,9 +84,6 @@ function next() {
 		}
 		playMusic(id);
 	}
-
-	// Add this block to maintain shuffle button state
-
 	const suffleButton = document.querySelector("#suffle");
 	if (isSuffle) {
 		suffleButton.style.backgroundColor = "#20b2aa";

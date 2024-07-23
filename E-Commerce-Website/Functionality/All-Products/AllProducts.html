@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./AllProducts.css" />
+    <link rel="stylesheet" href="../Navbar/nav.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
+    <title>All Products</title>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <main>
+      <h1 id="our-products" class="header">Our Products</h1>
+      <div class="filter-container">
+        <div class="search-container">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search products..."
+            onkeyup="performSearch()"
+          />
+        </div>
+        <div class="filterDiv"></div>
+      </div>
+      <div class="allProductDiv"></div>
+      <button id="load-more-btn" onclick="loadMore()">Load More</button>
+    </main>
+
+    <div id="footer"></div>
+    <script src="./AllProducts.js"></script>
+    <script src="../../Functionality/Single-Product/SingleProduct.html"></script>
+    <script src="../../Functionality/Cart/Cart.js"></script>
+    <script src="../Navbar/Navbar.js"></script>
+    <script src="../Footer/Footer.js"></script>
+  </body>
+</html>

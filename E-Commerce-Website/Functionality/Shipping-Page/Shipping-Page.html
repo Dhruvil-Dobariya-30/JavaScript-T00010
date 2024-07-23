@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Shipping-Page.css" />
+    <link rel="stylesheet" href="../../Functionality/Navbar/nav.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div class="container">
+      <h1>Shipping Details</h1>
+      <p id="item-count"></p>
+
+      <div class="shipping-container">
+        <div class="order-details">
+          <h2>Order Summary</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody id="order-items"></tbody>
+          </table>
+        </div>
+
+        <div class="delivery-info">
+          <div class="estimated-delivery">
+            <h3>Estimated Delivery</h3>
+            <p id="estimated-delivery"></p>
+          </div>
+
+          <div class="delivery-address">
+            <h3>Delivery Address</h3>
+            <p id="delivery-address"></p>
+          </div>
+
+          <div class="order-summary">
+            <h3>Order Total</h3>
+            <table>
+              <tr>
+                <td>Subtotal</td>
+                <td id="subtotal"></td>
+              </tr>
+              <tr>
+                <td>Discount</td>
+                <td id="discount"></td>
+              </tr>
+              <tr class="total-row">
+                <td>Total</td>
+                <td id="total"></td>
+              </tr>
+            </table>
+          </div>
+
+          <button id="cancel-order">Cancel Order</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="../Footer/footer.js"></script>
+    <script src="../Navbar/Navbar.js"></script>
+    <script src="./Shipping-Page.js"></script>
+  </body>
+</html>

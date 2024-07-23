@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+
+
+body {
+  font-family: "Mukta", serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #3a0ca3;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#item-count {
+  margin-top: 0;
+  color: #666;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.cart-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.cart-items,
+.cart-summary {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+  flex: 2;
+}
+
+.cart-summary {
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  font-weight: 600;
+  color: #3a0ca3;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-info img {
+  width: 70px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.product-info h4 {
+  margin: 0 0 5px 0;
+  color: #3a0ca3;
+  text-align: center;
+}
+
+.product-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  background-color: #4cc9f0;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+.quantity-controls button:hover {
+  background-color: #3a0ca3;
+}
+
+.quantity-controls span {
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.color-select,
+.size-select {
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.remove-btn {
+  background-color: #f72585;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background-color: #3a0ca3;
+}
+
+.coupon-code,
+.cart-total {
+  margin-bottom: 20px;
+}
+
+.coupon-code h3,
+.cart-total h3 {
+  color: #3a0ca3;
+  margin-top: 0;
+}
+
+.coupon-input {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+button {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
+button {
+  background-color: #4cc9f0;
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #3a0ca3;
+}
+
+.cart-total table {
+  margin-bottom: 20px;
+}
+
+.total-row {
+  font-weight: bold;
+  color: #3a0ca3;
+}
+
+#checkout-btn {
+  width: 100%;
+  background-color: #f72585;
+  font-size: 1.1rem;
+  padding: 15px;
+}
+
+#checkout-btn:hover {
+  background-color: #3a0ca3;
+}
+
+.mobile-label {
+  display: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #3a0ca3;
+  margin-bottom: 5px;
+}
+
+.address-field {
+  margin-bottom: 20px;
+}
+
+.address-field h3 {
+  color: #3a0ca3;
+  margin-top: 0;
+}
+
+#delivery-address {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .mobile-label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3a0ca3;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  .product-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-info img {
+    margin: 0 auto 10px;
+  }
+
+  .product-info div {
+    width: 100%;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .remove-btn {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .color-select,
+  .size-select {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

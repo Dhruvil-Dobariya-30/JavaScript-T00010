@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Navbar/nav.css" />
+    <link rel="stylesheet" href="./Cart.css" />
+    <link rel="stylesheet" href="../Footer/footer.css" />
+    <title>Product Cart</title>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <div class="container">
+      <h1>Shopping Bag</h1>
+      <p id="item-count">0 items in your bag.</p>
+
+      <div class="cart-container">
+        <div class="cart-items">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="cart-items-body"></tbody>
+          </table>
+        </div>
+
+        <div class="cart-summary">
+          <div class="address-field">
+            <h3>Delivery Address</h3>
+            <textarea
+              id="delivery-address"
+              rows="3"
+              placeholder="Enter your delivery address"
+              required
+            ></textarea>
+          </div>
+          <div class="coupon-code">
+            <h3>Coupon Code</h3>
+            <p>Enter your coupon code if you have one.</p>
+            <div class="coupon-input">
+              <input
+                type="text"
+                id="coupon-input"
+                placeholder="Enter coupon code"
+              />
+              <button id="apply-coupon">Apply</button>
+            </div>
+          </div>
+
+          <div class="cart-total">
+            <h3>Cart Total</h3>
+            <table>
+              <tr>
+                <td>Cart Subtotal</td>
+                <td id="cart-subtotal">₹0.00</td>
+              </tr>
+              <tr>
+                <td>Discount</td>
+                <td id="discount-amount">₹0.00</td>
+              </tr>
+              <tr class="total-row">
+                <td>Cart Total</td>
+                <td id="cart-total">₹0.00</td>
+              </tr>
+            </table>
+            <button id="checkout-btn">Place Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../Navbar/Navbar.js"></script>
+    <script src="./Cart.js"></script>
+    <script src="../../index.js"></script>
+    <script src="../Single-Product/SingleProduct.js"></script>
+    <script src="../All-Products/AllProducts.js"></script>
+    <script src="../Footer/footer.js"></script>
+  </body>
+</html>

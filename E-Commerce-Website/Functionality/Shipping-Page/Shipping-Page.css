@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Mukta", serif;
+  background-color: #f8f9fa;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #3a0ca3;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#item-count {
+  margin-top: 0;
+  color: #666;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.shipping-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.order-details,
+.delivery-info {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-details {
+  flex: 2;
+}
+
+.delivery-info {
+  flex: 1;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #3a0ca3;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  font-weight: 600;
+  color: #3a0ca3;
+}
+
+.order-summary table {
+  margin-top: 15px;
+}
+
+.total-row {
+  font-weight: bold;
+  color: #3a0ca3;
+}
+
+.estimated-delivery,
+.delivery-address,
+.order-summary {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#cancel-order {
+  width: 100%;
+  background-color: #f72585;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+#cancel-order:hover {
+  background-color: #3a0ca3;
+}
+
+@media (max-width: 768px) {
+  .shipping-container {
+    flex-direction: column;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    text-align: center;
+  }
+}
